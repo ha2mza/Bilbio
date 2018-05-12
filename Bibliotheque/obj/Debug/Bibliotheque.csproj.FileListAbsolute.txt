@@ -12,3 +12,6 @@ C:\Users\younes\Desktop\programmation evenementiel\Bibliotheque\Bibliotheque\obj
 C:\Users\younes\Desktop\programmation evenementiel\Bibliotheque\Bibliotheque\obj\Debug\Bibliotheque.csproj.GenerateResource.Cache
 C:\Users\younes\Desktop\programmation evenementiel\Bibliotheque\Bibliotheque\obj\Debug\Bibliotheque.exe
 C:\Users\younes\Desktop\programmation evenementiel\Bibliotheque\Bibliotheque\obj\Debug\Bibliotheque.pdb
+C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\bin\Debug\Bibliotheque.exe.config
+C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\obj\Debug\Bibliotheque.exe
+C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\obj\Debug\Bibliotheque.pdb

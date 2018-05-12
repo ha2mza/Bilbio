@@ -44,36 +44,49 @@ namespace Bibliotheque
 
         private void btnModifier_Click(object sender, EventArgs e)
         {
-            DsBiblio.themeRow themerow = ds.theme.FindBycodeth(int.Parse(codethTextBox.Text));
-            themerow.codeth = int.Parse(codethTextBox.Text);
-            themerow.intituleTh = intituleThTextBox.Text;
-            Mvvm_theme.ResetBindings(true);
-            themeTableAdapter.Update(ds);
-            
+            try
+            {
+                DsBiblio.themeRow themerow = ds.theme.FindBycodeth(int.Parse(codethTextBox.Text));
+                themerow.codeth = int.Parse(codethTextBox.Text);
+                themerow.intituleTh = intituleThTextBox.Text;
+                Mvvm_theme.ResetBindings(true);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnSupprimer_Click(object sender, EventArgs e)
         {
-            ds.theme.RemovethemeRow(ds.theme.FindBycodeth(int.Parse(codethTextBox.Text)));
+            try
+            {
+                ds.theme.RemovethemeRow(ds.theme.FindBycodeth(int.Parse(codethTextBox.Text)));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnlast_Click(object sender, EventArgs e)
         {
-
+            Mvvm_theme.MoveLast();
         }
 
         private void btnnext_Click(object sender, EventArgs e)
         {
-
+            Mvvm_theme.MoveNext();
         }
 
         private void btnprevious_Click(object sender, EventArgs e)
         {
-
+            Mvvm_theme.MovePrevious();
         }
 
         private void btnfirst_Click(object sender, EventArgs e)
         {
+            Mvvm_theme.MoveFirst();
 
         }
 

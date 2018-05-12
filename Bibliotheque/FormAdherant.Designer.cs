@@ -262,7 +262,6 @@
             this.Controls.Add(this.dateInscriptionDateTimePicker);
             this.Name = "FormAdherant";
             this.Text = "FormAdherant";
-            this.Load += new System.EventHandler(this.FormAdherant_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

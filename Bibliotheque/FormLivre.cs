@@ -24,7 +24,8 @@ namespace Bibliotheque
             livreTableAdapter.Fill(ds.livre);
             Mvvm_livre = new BindingSource();
             Mvvm_livre.DataSource = ds.livre;
-
+            themeTableAdapter themetableadpter = new themeTableAdapter();
+            themetableadpter.Fill(ds.theme);
             codeLTextBox.DataBindings.Add("Text", Mvvm_livre, "codeL", true, DataSourceUpdateMode.Never);
             titreTextBox.DataBindings.Add("Text", Mvvm_livre, "titre", true, DataSourceUpdateMode.Never);
             auteurTextBox.DataBindings.Add("Text", Mvvm_livre, "auteur", true, DataSourceUpdateMode.Never);
@@ -46,7 +47,9 @@ namespace Bibliotheque
         {
             try
             {
-                ds.livre.AddlivreRow(titreTextBox.Text, auteurTextBox.Text, int.Parse(nbExemplaireTextBox.Text), ds.theme.FindBycodeth((int)codeThComboBox.SelectedValue));
+                ds.livre.AddlivreRow(titreTextBox.Text, auteurTextBox.Text, 
+                    int.Parse(nbExemplaireTextBox.Text), 
+                    ds.theme.FindBycodeth((int)codeThComboBox.SelectedValue));
                 Mvvm_livre.ResetBindings(true);
 
             }
@@ -60,11 +63,15 @@ namespace Bibliotheque
             livrerow.Auteur = auteurTextBox.Text;
             livrerow.NbExemplaire = int.Parse(nbExemplaireTextBox.Text);
             livrerow.CodeTh = int.Parse(codeThComboBox.Text);
+            Mvvm_livre.ResetBindings(true);
         }
 
         private void btnSupprimer_Click(object sender, EventArgs e)
         {
-            try { Mvvm_livre.RemoveAt(Mvvm_livre.Find("codeL", codeLTextBox.Text)); }
+            try
+            {
+                Mvvm_livre.RemoveAt(Mvvm_livre.Find("codeL", codeLTextBox.Text));
+            }
             catch(Exception ex) { MessageBox.Show(ex.Message); }
         }
 
@@ -91,11 +98,6 @@ namespace Bibliotheque
         private void btnfirst_Click(object sender, EventArgs e)
         {
             Mvvm_livre.MoveFirst();
-        }
-
-        private void FormLivre_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

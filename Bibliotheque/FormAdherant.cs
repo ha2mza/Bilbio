@@ -60,7 +60,7 @@ namespace Bibliotheque
             adherentrow.nomA = nomATextBox.Text;
             adherentrow.adresse = adresseTextBox.Text;
             adherentrow.DateInscription = dateInscriptionDateTimePicker.Value;
-            Mvvm_adherant.ResetBindings(false);
+            Mvvm_adherant.ResetBindings(true);
             AdherentTableAdapter.Update(ds);
         }
 
@@ -96,10 +96,6 @@ namespace Bibliotheque
         {
             Mvvm_adherant.MoveFirst();
         }
-
-        private void FormAdherant_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
