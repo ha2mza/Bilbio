@@ -1,14 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{317ADA95-0657-4A5C-9F54-065780405A23}</ProjectGuid>
+    <ProjectGuid>{5267F610-A165-462F-9227-24AC237528FA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Bibliotheque</RootNamespace>
     <AssemblyName>Bibliotheque</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
@@ -21,7 +22,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <LangVersion>7.2</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -51,17 +51,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DsBiblio.xsd</DependentUpon>
     </Compile>
-    <Compile Include="FormAdherent.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormAdherent.Designer.cs">
-      <DependentUpon>FormAdherent.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormEmprunt.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormEmprunt.Designer.cs">
       <DependentUpon>FormEmprunt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAdherant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdherant.Designer.cs">
+      <DependentUpon>FormAdherant.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLivre.cs">
       <SubType>Form</SubType>
@@ -75,12 +75,6 @@
     <Compile Include="FormRetour.Designer.cs">
       <DependentUpon>FormRetour.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormTheme.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormTheme.Designer.cs">
-      <DependentUpon>FormTheme.cs</DependentUpon>
-    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,20 +83,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormAdherent.resx">
-      <DependentUpon>FormAdherent.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="FormTheme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTheme.Designer.cs">
+      <DependentUpon>FormTheme.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormEmprunt.resx">
       <DependentUpon>FormEmprunt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAdherant.resx">
+      <DependentUpon>FormAdherant.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLivre.resx">
       <DependentUpon>FormLivre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRetour.resx">
       <DependentUpon>FormRetour.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormTheme.resx">
-      <DependentUpon>FormTheme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -116,6 +113,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormTheme.resx">
+      <DependentUpon>FormTheme.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DsBiblio.xsc">
       <DependentUpon>DsBiblio.xsd</DependentUpon>
     </None>
@@ -141,4 +141,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
 </Project>

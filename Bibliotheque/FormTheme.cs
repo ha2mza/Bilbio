@@ -7,43 +7,54 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Bibliotheque.DsBiblioTableAdapters;
 
 namespace Bibliotheque
 {
-    using DsBiblioTableAdapters;
     public partial class FormTheme : Form
     {
         DsBiblio ds = null;
         themeTableAdapter themeTableAdapter = null;
         BindingSource Mvvm_theme = null;
+
         public FormTheme()
         {
             InitializeComponent();
             ds = new DsBiblio();
             themeTableAdapter = new themeTableAdapter();
             themeTableAdapter.Fill(ds.theme);
-            Mvvm_theme = new BindingSource();
-            
+            Mvvm_theme.DataSource = ds.theme;
+
+            codethTextBox.DataBindings.Add("Text", Mvvm_theme, "codeth", false, DataSourceUpdateMode.Never);
+            intituleThTextBox.DataBindings.Add("Text", Mvvm_theme, "intituleTh", false, DataSourceUpdateMode.Never);
+
+
         }
 
         private void btnajouter_Click(object sender, EventArgs e)
         {
+            try
+            {
+                ds.theme.AddthemeRow(intituleThTextBox.Text);
+                Mvvm_theme.ResetBindings(true);
 
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         private void btnModifier_Click(object sender, EventArgs e)
         {
-
+            DsBiblio.themeRow themerow = ds.theme.FindBycodeth(int.Parse(codethTextBox.Text));
+            themerow.codeth = int.Parse(codethTextBox.Text);
+            themerow.intituleTh = intituleThTextBox.Text;
+            Mvvm_theme.ResetBindings(true);
+            themeTableAdapter.Update(ds);
+            
         }
 
         private void btnSupprimer_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnRechercher_Click(object sender, EventArgs e)
-        {
-
+            ds.theme.RemovethemeRow(ds.theme.FindBycodeth(int.Parse(codethTextBox.Text)));
         }
 
         private void btnlast_Click(object sender, EventArgs e)
@@ -64,6 +75,11 @@ namespace Bibliotheque
         private void btnfirst_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnRechercher_Click(object sender, EventArgs e)
+        {
+            Mvvm_theme.Find("codeth", txtRech.Text);
         }
 
         private void btnAnnuler_Click(object sender, EventArgs e)

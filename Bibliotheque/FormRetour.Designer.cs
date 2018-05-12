@@ -41,10 +41,28 @@
             ((System.ComponentModel.ISupportInitialize)(this.retourDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
+            // codeALabel
+            // 
+            codeALabel.AutoSize = true;
+            codeALabel.Location = new System.Drawing.Point(43, 38);
+            codeALabel.Name = "codeALabel";
+            codeALabel.Size = new System.Drawing.Size(44, 13);
+            codeALabel.TabIndex = 50;
+            codeALabel.Text = "code A:";
+            // 
+            // dateretourLabel
+            // 
+            dateretourLabel.AutoSize = true;
+            dateretourLabel.Location = new System.Drawing.Point(407, 38);
+            dateretourLabel.Name = "dateretourLabel";
+            dateretourLabel.Size = new System.Drawing.Size(58, 13);
+            dateretourLabel.TabIndex = 52;
+            dateretourLabel.Text = "dateretour:";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(42, 102);
+            this.label3.Location = new System.Drawing.Point(43, 90);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(196, 13);
             this.label3.TabIndex = 57;
@@ -53,14 +71,14 @@
             // 
             // txtnomAdr
             // 
-            this.txtnomAdr.Location = new System.Drawing.Point(117, 74);
+            this.txtnomAdr.Location = new System.Drawing.Point(118, 62);
             this.txtnomAdr.Name = "txtnomAdr";
             this.txtnomAdr.Size = new System.Drawing.Size(123, 20);
             this.txtnomAdr.TabIndex = 56;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(409, 92);
+            this.btnSave.Location = new System.Drawing.Point(410, 80);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 55;
@@ -75,7 +93,7 @@
             this.retourDataGridView.AllowUserToResizeColumns = false;
             this.retourDataGridView.AllowUserToResizeRows = false;
             this.retourDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.retourDataGridView.Location = new System.Drawing.Point(30, 129);
+            this.retourDataGridView.Location = new System.Drawing.Point(31, 117);
             this.retourDataGridView.Name = "retourDataGridView";
             this.retourDataGridView.ReadOnly = true;
             this.retourDataGridView.RowHeadersVisible = false;
@@ -83,37 +101,19 @@
             this.retourDataGridView.Size = new System.Drawing.Size(457, 220);
             this.retourDataGridView.TabIndex = 54;
             // 
-            // codeALabel
-            // 
-            codeALabel.AutoSize = true;
-            codeALabel.Location = new System.Drawing.Point(42, 50);
-            codeALabel.Name = "codeALabel";
-            codeALabel.Size = new System.Drawing.Size(44, 13);
-            codeALabel.TabIndex = 50;
-            codeALabel.Text = "code A:";
-            // 
             // codeAComboBox
             // 
             this.codeAComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.codeAComboBox.FormattingEnabled = true;
-            this.codeAComboBox.Location = new System.Drawing.Point(117, 47);
+            this.codeAComboBox.Location = new System.Drawing.Point(118, 35);
             this.codeAComboBox.Name = "codeAComboBox";
             this.codeAComboBox.Size = new System.Drawing.Size(123, 21);
             this.codeAComboBox.TabIndex = 51;
             this.codeAComboBox.SelectedIndexChanged += new System.EventHandler(this.codeAComboBox_SelectedIndexChanged);
             // 
-            // dateretourLabel
-            // 
-            dateretourLabel.AutoSize = true;
-            dateretourLabel.Location = new System.Drawing.Point(406, 50);
-            dateretourLabel.Name = "dateretourLabel";
-            dateretourLabel.Size = new System.Drawing.Size(58, 13);
-            dateretourLabel.TabIndex = 52;
-            dateretourLabel.Text = "dateretour:";
-            // 
             // dateretourDateTimePicker
             // 
-            this.dateretourDateTimePicker.Location = new System.Drawing.Point(409, 66);
+            this.dateretourDateTimePicker.Location = new System.Drawing.Point(410, 54);
             this.dateretourDateTimePicker.Name = "dateretourDateTimePicker";
             this.dateretourDateTimePicker.Size = new System.Drawing.Size(123, 20);
             this.dateretourDateTimePicker.TabIndex = 53;
@@ -122,7 +122,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(560, 379);
+            this.ClientSize = new System.Drawing.Size(565, 372);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtnomAdr);
             this.Controls.Add(this.btnSave);

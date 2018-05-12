@@ -45,10 +45,28 @@
             ((System.ComponentModel.ISupportInitialize)(this.empruntDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
+            // codeALabel
+            // 
+            codeALabel.AutoSize = true;
+            codeALabel.Location = new System.Drawing.Point(12, 38);
+            codeALabel.Name = "codeALabel";
+            codeALabel.Size = new System.Drawing.Size(84, 13);
+            codeALabel.TabIndex = 51;
+            codeALabel.Text = "Code Adhérent :";
+            // 
+            // date_empruntLabel
+            // 
+            date_empruntLabel.AutoSize = true;
+            date_empruntLabel.Location = new System.Drawing.Point(583, 122);
+            date_empruntLabel.Name = "date_empruntLabel";
+            date_empruntLabel.Size = new System.Drawing.Size(72, 13);
+            date_empruntLabel.TabIndex = 53;
+            date_empruntLabel.Text = "date emprunt:";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(92, 160);
+            this.label3.Location = new System.Drawing.Point(12, 122);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(187, 13);
             this.label3.TabIndex = 60;
@@ -58,7 +76,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(420, 107);
+            this.label2.Location = new System.Drawing.Point(316, 69);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 59;
@@ -67,7 +85,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(420, 71);
+            this.label1.Location = new System.Drawing.Point(316, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 58;
@@ -76,7 +94,7 @@
             // codethComboBox
             // 
             this.codethComboBox.FormattingEnabled = true;
-            this.codethComboBox.Location = new System.Drawing.Point(481, 68);
+            this.codethComboBox.Location = new System.Drawing.Point(377, 30);
             this.codethComboBox.Name = "codethComboBox";
             this.codethComboBox.Size = new System.Drawing.Size(101, 21);
             this.codethComboBox.TabIndex = 57;
@@ -85,7 +103,7 @@
             // lstBoxLivres
             // 
             this.lstBoxLivres.FormattingEnabled = true;
-            this.lstBoxLivres.Location = new System.Drawing.Point(423, 126);
+            this.lstBoxLivres.Location = new System.Drawing.Point(377, 83);
             this.lstBoxLivres.Name = "lstBoxLivres";
             this.lstBoxLivres.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.lstBoxLivres.Size = new System.Drawing.Size(159, 134);
@@ -94,49 +112,31 @@
             // 
             // txtnomAdr
             // 
-            this.txtnomAdr.Location = new System.Drawing.Point(180, 100);
+            this.txtnomAdr.Location = new System.Drawing.Point(102, 62);
             this.txtnomAdr.Name = "txtnomAdr";
             this.txtnomAdr.Size = new System.Drawing.Size(123, 20);
             this.txtnomAdr.TabIndex = 55;
-            // 
-            // codeALabel
-            // 
-            codeALabel.AutoSize = true;
-            codeALabel.Location = new System.Drawing.Point(92, 76);
-            codeALabel.Name = "codeALabel";
-            codeALabel.Size = new System.Drawing.Size(84, 13);
-            codeALabel.TabIndex = 51;
-            codeALabel.Text = "Code Adhérent :";
             // 
             // codeAComboBox
             // 
             this.codeAComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.codeAComboBox.FormattingEnabled = true;
-            this.codeAComboBox.Location = new System.Drawing.Point(180, 73);
+            this.codeAComboBox.Location = new System.Drawing.Point(102, 35);
             this.codeAComboBox.Name = "codeAComboBox";
             this.codeAComboBox.Size = new System.Drawing.Size(123, 21);
             this.codeAComboBox.TabIndex = 52;
             this.codeAComboBox.SelectedIndexChanged += new System.EventHandler(this.codeAComboBox_SelectedIndexChanged);
             // 
-            // date_empruntLabel
-            // 
-            date_empruntLabel.AutoSize = true;
-            date_empruntLabel.Location = new System.Drawing.Point(600, 160);
-            date_empruntLabel.Name = "date_empruntLabel";
-            date_empruntLabel.Size = new System.Drawing.Size(72, 13);
-            date_empruntLabel.TabIndex = 53;
-            date_empruntLabel.Text = "date emprunt:";
-            // 
             // date_empruntDateTimePicker
             // 
-            this.date_empruntDateTimePicker.Location = new System.Drawing.Point(603, 176);
+            this.date_empruntDateTimePicker.Location = new System.Drawing.Point(558, 138);
             this.date_empruntDateTimePicker.Name = "date_empruntDateTimePicker";
             this.date_empruntDateTimePicker.Size = new System.Drawing.Size(118, 20);
             this.date_empruntDateTimePicker.TabIndex = 54;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(617, 220);
+            this.btnSave.Location = new System.Drawing.Point(586, 164);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 50;
@@ -152,7 +152,7 @@
             this.empruntDataGridView.AllowUserToResizeRows = false;
             this.empruntDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.empruntDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.empruntDataGridView.Location = new System.Drawing.Point(79, 191);
+            this.empruntDataGridView.Location = new System.Drawing.Point(12, 149);
             this.empruntDataGridView.Name = "empruntDataGridView";
             this.empruntDataGridView.ReadOnly = true;
             this.empruntDataGridView.RowHeadersVisible = false;
@@ -163,7 +163,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(703, 367);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -177,7 +177,7 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.empruntDataGridView);
             this.Name = "FormEmprunt";
-            this.Text = "FormEmprunt";
+            this.Text = "Emprunt";
             ((System.ComponentModel.ISupportInitialize)(this.empruntDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -59,9 +59,63 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(18, 52);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(44, 13);
+            label1.TabIndex = 26;
+            label1.Text = "Code L:";
+            // 
+            // codeLLabel
+            // 
+            codeLLabel.AutoSize = true;
+            codeLLabel.Location = new System.Drawing.Point(126, 84);
+            codeLLabel.Name = "codeLLabel";
+            codeLLabel.Size = new System.Drawing.Size(44, 13);
+            codeLLabel.TabIndex = 50;
+            codeLLabel.Text = "Code L:";
+            // 
+            // titreLabel
+            // 
+            titreLabel.AutoSize = true;
+            titreLabel.Location = new System.Drawing.Point(126, 110);
+            titreLabel.Name = "titreLabel";
+            titreLabel.Size = new System.Drawing.Size(31, 13);
+            titreLabel.TabIndex = 52;
+            titreLabel.Text = "Titre:";
+            // 
+            // auteurLabel
+            // 
+            auteurLabel.AutoSize = true;
+            auteurLabel.Location = new System.Drawing.Point(126, 136);
+            auteurLabel.Name = "auteurLabel";
+            auteurLabel.Size = new System.Drawing.Size(41, 13);
+            auteurLabel.TabIndex = 54;
+            auteurLabel.Text = "Auteur:";
+            // 
+            // nbExemplaireLabel
+            // 
+            nbExemplaireLabel.AutoSize = true;
+            nbExemplaireLabel.Location = new System.Drawing.Point(126, 162);
+            nbExemplaireLabel.Name = "nbExemplaireLabel";
+            nbExemplaireLabel.Size = new System.Drawing.Size(78, 13);
+            nbExemplaireLabel.TabIndex = 56;
+            nbExemplaireLabel.Text = "Nb Exemplaire:";
+            // 
+            // codeThLabel
+            // 
+            codeThLabel.AutoSize = true;
+            codeThLabel.Location = new System.Drawing.Point(126, 188);
+            codeThLabel.Name = "codeThLabel";
+            codeThLabel.Size = new System.Drawing.Size(51, 13);
+            codeThLabel.TabIndex = 58;
+            codeThLabel.Text = "Code Th:";
+            // 
             // btnfirst
             // 
-            this.btnfirst.Location = new System.Drawing.Point(24, 225);
+            this.btnfirst.Location = new System.Drawing.Point(106, 284);
             this.btnfirst.Name = "btnfirst";
             this.btnfirst.Size = new System.Drawing.Size(36, 23);
             this.btnfirst.TabIndex = 64;
@@ -71,7 +125,7 @@
             // 
             // btnprevious
             // 
-            this.btnprevious.Location = new System.Drawing.Point(84, 225);
+            this.btnprevious.Location = new System.Drawing.Point(166, 284);
             this.btnprevious.Name = "btnprevious";
             this.btnprevious.Size = new System.Drawing.Size(36, 23);
             this.btnprevious.TabIndex = 63;
@@ -81,7 +135,7 @@
             // 
             // btnlast
             // 
-            this.btnlast.Location = new System.Drawing.Point(204, 225);
+            this.btnlast.Location = new System.Drawing.Point(286, 284);
             this.btnlast.Name = "btnlast";
             this.btnlast.Size = new System.Drawing.Size(36, 23);
             this.btnlast.TabIndex = 62;
@@ -91,7 +145,7 @@
             // 
             // btnnext
             // 
-            this.btnnext.Location = new System.Drawing.Point(144, 225);
+            this.btnnext.Location = new System.Drawing.Point(226, 284);
             this.btnnext.Name = "btnnext";
             this.btnnext.Size = new System.Drawing.Size(36, 23);
             this.btnnext.TabIndex = 61;
@@ -104,21 +158,12 @@
             this.groupBox1.Controls.Add(label1);
             this.groupBox1.Controls.Add(this.btnRechercher);
             this.groupBox1.Controls.Add(this.txtRech);
-            this.groupBox1.Location = new System.Drawing.Point(260, 194);
+            this.groupBox1.Location = new System.Drawing.Point(342, 253);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(183, 75);
             this.groupBox1.TabIndex = 60;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Rechercher";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(18, 52);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(44, 13);
-            label1.TabIndex = 26;
-            label1.Text = "Code L:";
             // 
             // btnRechercher
             // 
@@ -137,91 +182,46 @@
             this.txtRech.Size = new System.Drawing.Size(87, 20);
             this.txtRech.TabIndex = 27;
             // 
-            // codeLLabel
-            // 
-            codeLLabel.AutoSize = true;
-            codeLLabel.Location = new System.Drawing.Point(44, 25);
-            codeLLabel.Name = "codeLLabel";
-            codeLLabel.Size = new System.Drawing.Size(44, 13);
-            codeLLabel.TabIndex = 50;
-            codeLLabel.Text = "Code L:";
-            // 
             // codeLTextBox
             // 
-            this.codeLTextBox.Location = new System.Drawing.Point(128, 22);
+            this.codeLTextBox.Location = new System.Drawing.Point(210, 81);
             this.codeLTextBox.Name = "codeLTextBox";
             this.codeLTextBox.Size = new System.Drawing.Size(152, 20);
             this.codeLTextBox.TabIndex = 51;
             // 
-            // titreLabel
-            // 
-            titreLabel.AutoSize = true;
-            titreLabel.Location = new System.Drawing.Point(44, 51);
-            titreLabel.Name = "titreLabel";
-            titreLabel.Size = new System.Drawing.Size(31, 13);
-            titreLabel.TabIndex = 52;
-            titreLabel.Text = "Titre:";
-            // 
             // titreTextBox
             // 
-            this.titreTextBox.Location = new System.Drawing.Point(128, 48);
+            this.titreTextBox.Location = new System.Drawing.Point(210, 107);
             this.titreTextBox.Name = "titreTextBox";
             this.titreTextBox.Size = new System.Drawing.Size(152, 20);
             this.titreTextBox.TabIndex = 53;
             // 
-            // auteurLabel
-            // 
-            auteurLabel.AutoSize = true;
-            auteurLabel.Location = new System.Drawing.Point(44, 77);
-            auteurLabel.Name = "auteurLabel";
-            auteurLabel.Size = new System.Drawing.Size(41, 13);
-            auteurLabel.TabIndex = 54;
-            auteurLabel.Text = "Auteur:";
-            // 
             // auteurTextBox
             // 
-            this.auteurTextBox.Location = new System.Drawing.Point(128, 74);
+            this.auteurTextBox.Location = new System.Drawing.Point(210, 133);
             this.auteurTextBox.Name = "auteurTextBox";
             this.auteurTextBox.Size = new System.Drawing.Size(152, 20);
             this.auteurTextBox.TabIndex = 55;
             // 
-            // nbExemplaireLabel
-            // 
-            nbExemplaireLabel.AutoSize = true;
-            nbExemplaireLabel.Location = new System.Drawing.Point(44, 103);
-            nbExemplaireLabel.Name = "nbExemplaireLabel";
-            nbExemplaireLabel.Size = new System.Drawing.Size(78, 13);
-            nbExemplaireLabel.TabIndex = 56;
-            nbExemplaireLabel.Text = "Nb Exemplaire:";
-            // 
             // nbExemplaireTextBox
             // 
-            this.nbExemplaireTextBox.Location = new System.Drawing.Point(128, 100);
+            this.nbExemplaireTextBox.Location = new System.Drawing.Point(210, 159);
             this.nbExemplaireTextBox.Name = "nbExemplaireTextBox";
             this.nbExemplaireTextBox.Size = new System.Drawing.Size(152, 20);
             this.nbExemplaireTextBox.TabIndex = 57;
-            // 
-            // codeThLabel
-            // 
-            codeThLabel.AutoSize = true;
-            codeThLabel.Location = new System.Drawing.Point(44, 129);
-            codeThLabel.Name = "codeThLabel";
-            codeThLabel.Size = new System.Drawing.Size(51, 13);
-            codeThLabel.TabIndex = 58;
-            codeThLabel.Text = "Code Th:";
             // 
             // codeThComboBox
             // 
             this.codeThComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.codeThComboBox.FormattingEnabled = true;
-            this.codeThComboBox.Location = new System.Drawing.Point(128, 126);
+            this.codeThComboBox.Location = new System.Drawing.Point(210, 185);
             this.codeThComboBox.Name = "codeThComboBox";
             this.codeThComboBox.Size = new System.Drawing.Size(152, 21);
             this.codeThComboBox.TabIndex = 59;
             // 
             // btnAnnuler
             // 
-            this.btnAnnuler.Location = new System.Drawing.Point(19, 176);
+            this.btnAnnuler.Location = new System.Drawing.Point(101, 235);
             this.btnAnnuler.Name = "btnAnnuler";
             this.btnAnnuler.Size = new System.Drawing.Size(75, 23);
             this.btnAnnuler.TabIndex = 49;
@@ -231,7 +231,7 @@
             // 
             // btnSupprimer
             // 
-            this.btnSupprimer.Location = new System.Drawing.Point(368, 120);
+            this.btnSupprimer.Location = new System.Drawing.Point(450, 179);
             this.btnSupprimer.Name = "btnSupprimer";
             this.btnSupprimer.Size = new System.Drawing.Size(75, 23);
             this.btnSupprimer.TabIndex = 48;
@@ -241,7 +241,7 @@
             // 
             // btnModifier
             // 
-            this.btnModifier.Location = new System.Drawing.Point(368, 79);
+            this.btnModifier.Location = new System.Drawing.Point(450, 138);
             this.btnModifier.Name = "btnModifier";
             this.btnModifier.Size = new System.Drawing.Size(75, 23);
             this.btnModifier.TabIndex = 47;
@@ -251,7 +251,7 @@
             // 
             // btnajouter
             // 
-            this.btnajouter.Location = new System.Drawing.Point(368, 38);
+            this.btnajouter.Location = new System.Drawing.Point(450, 97);
             this.btnajouter.Name = "btnajouter";
             this.btnajouter.Size = new System.Drawing.Size(75, 23);
             this.btnajouter.TabIndex = 46;
@@ -263,7 +263,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(477, 299);
+            this.ClientSize = new System.Drawing.Size(627, 409);
             this.Controls.Add(this.btnfirst);
             this.Controls.Add(this.btnprevious);
             this.Controls.Add(this.btnlast);
@@ -284,7 +284,8 @@
             this.Controls.Add(this.btnModifier);
             this.Controls.Add(this.btnajouter);
             this.Name = "FormLivre";
-            this.Text = "FormLivre";
+            this.Text = "Livre";
+            this.Load += new System.EventHandler(this.FormLivre_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

@@ -1,15 +1,14 @@
-C:\Users\Admin\source\repos\Bibliotheque\Bibliotheque\obj\Debug\Bibliotheque.csprojResolveAssemblyReference.cache
-C:\Users\Admin\source\repos\Bibliotheque\Bibliotheque\obj\Debug\Bibliotheque.FormAdherent.resources
-C:\Users\Admin\source\repos\Bibliotheque\Bibliotheque\obj\Debug\Bibliotheque.FormEmprunt.resources
-C:\Users\Admin\source\repos\Bibliotheque\Bibliotheque\obj\Debug\Bibliotheque.FormLivre.resources
-C:\Users\Admin\source\repos\Bibliotheque\Bibliotheque\obj\Debug\Bibliotheque.FormRetour.resources
-C:\Users\Admin\source\repos\Bibliotheque\Bibliotheque\obj\Debug\Bibliotheque.FormTheme.resources
-C:\Users\Admin\source\repos\Bibliotheque\Bibliotheque\obj\Debug\Bibliotheque.Menu.resources
-C:\Users\Admin\source\repos\Bibliotheque\Bibliotheque\obj\Debug\Bibliotheque.Properties.Resources.resources
-C:\Users\Admin\source\repos\Bibliotheque\Bibliotheque\obj\Debug\Bibliotheque.csproj.GenerateResource.cache
-C:\Users\Admin\source\repos\Bibliotheque\Bibliotheque\obj\Debug\Bibliotheque.csproj.CoreCompileInputs.cache
-C:\Users\Admin\source\repos\Bibliotheque\Bibliotheque\bin\Debug\Bibliotheque.exe.config
-C:\Users\Admin\source\repos\Bibliotheque\Bibliotheque\bin\Debug\Bibliotheque.exe
-C:\Users\Admin\source\repos\Bibliotheque\Bibliotheque\bin\Debug\Bibliotheque.pdb
-C:\Users\Admin\source\repos\Bibliotheque\Bibliotheque\obj\Debug\Bibliotheque.exe
-C:\Users\Admin\source\repos\Bibliotheque\Bibliotheque\obj\Debug\Bibliotheque.pdb
+C:\Users\younes\Desktop\programmation evenementiel\Bibliotheque\Bibliotheque\bin\Debug\Bibliotheque.exe.config
+C:\Users\younes\Desktop\programmation evenementiel\Bibliotheque\Bibliotheque\bin\Debug\Bibliotheque.exe
+C:\Users\younes\Desktop\programmation evenementiel\Bibliotheque\Bibliotheque\bin\Debug\Bibliotheque.pdb
+C:\Users\younes\Desktop\programmation evenementiel\Bibliotheque\Bibliotheque\obj\Debug\Bibliotheque.csprojResolveAssemblyReference.cache
+C:\Users\younes\Desktop\programmation evenementiel\Bibliotheque\Bibliotheque\obj\Debug\Bibliotheque.FormEmprunt.resources
+C:\Users\younes\Desktop\programmation evenementiel\Bibliotheque\Bibliotheque\obj\Debug\Bibliotheque.FormAdherant.resources
+C:\Users\younes\Desktop\programmation evenementiel\Bibliotheque\Bibliotheque\obj\Debug\Bibliotheque.FormLivre.resources
+C:\Users\younes\Desktop\programmation evenementiel\Bibliotheque\Bibliotheque\obj\Debug\Bibliotheque.FormRetour.resources
+C:\Users\younes\Desktop\programmation evenementiel\Bibliotheque\Bibliotheque\obj\Debug\Bibliotheque.Menu.resources
+C:\Users\younes\Desktop\programmation evenementiel\Bibliotheque\Bibliotheque\obj\Debug\Bibliotheque.Properties.Resources.resources
+C:\Users\younes\Desktop\programmation evenementiel\Bibliotheque\Bibliotheque\obj\Debug\Bibliotheque.FormTheme.resources
+C:\Users\younes\Desktop\programmation evenementiel\Bibliotheque\Bibliotheque\obj\Debug\Bibliotheque.csproj.GenerateResource.Cache
+C:\Users\younes\Desktop\programmation evenementiel\Bibliotheque\Bibliotheque\obj\Debug\Bibliotheque.exe
+C:\Users\younes\Desktop\programmation evenementiel\Bibliotheque\Bibliotheque\obj\Debug\Bibliotheque.pdb

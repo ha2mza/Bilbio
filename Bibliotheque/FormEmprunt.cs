@@ -14,14 +14,13 @@ namespace Bibliotheque
     public partial class FormEmprunt : Form
     {
         DsBiblio ds = null;
-
+        empruntTableAdapter empruntTableAdapter = null;
         public FormEmprunt()
         {
             InitializeComponent();
             ds = new DsBiblio();
-            empruntTableAdapter empruntTableAdapter = new empruntTableAdapter();
+            empruntTableAdapter = new empruntTableAdapter();
             empruntTableAdapter.Fill(ds.emprunt);
-
         }
 
         private void btnSave_Click(object sender, EventArgs e)
