@@ -14,16 +14,12 @@ namespace Bibliotheque
     public partial class FormAdherant : Form
     {
         DsBiblio ds = null;
-        AdherentTableAdapter AdherentTableAdapter = null;
         BindingSource Mvvm_adherant = null;
-        bool vide = true;
         // Test finaaal
         public FormAdherant()
         {
             InitializeComponent();
-            ds = new DsBiblio();
-            AdherentTableAdapter = new AdherentTableAdapter();
-            AdherentTableAdapter.Fill(ds.Adherent);
+            ds = Program.ds;
             Mvvm_adherant = new BindingSource();
             Mvvm_adherant.DataSource = ds.Adherent;
             
@@ -62,7 +58,6 @@ namespace Bibliotheque
             adherentrow.adresse = adresseTextBox.Text;
             adherentrow.DateInscription = dateInscriptionDateTimePicker.Value;
             Mvvm_adherant.ResetBindings(true);
-            AdherentTableAdapter.Update(ds);
         }
 
         private void btnSupprimer_Click(object sender, EventArgs e)
@@ -97,6 +92,10 @@ namespace Bibliotheque
         {
             Mvvm_adherant.MoveFirst();
         }
-        
+
+        private void FormAdherant_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Program.fa = null;
+        }
     }
 }

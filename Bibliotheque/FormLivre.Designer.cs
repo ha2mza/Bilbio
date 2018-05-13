@@ -285,6 +285,7 @@
             this.Controls.Add(this.btnajouter);
             this.Name = "FormLivre";
             this.Text = "Livre";
+            this.Load += new System.EventHandler(this.FormLivre_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

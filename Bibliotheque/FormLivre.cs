@@ -99,5 +99,10 @@ namespace Bibliotheque
         {
             Mvvm_livre.MoveFirst();
         }
+
+        private void FormLivre_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

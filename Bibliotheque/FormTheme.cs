@@ -22,6 +22,7 @@ namespace Bibliotheque
             InitializeComponent();
             ds = new DsBiblio();
             themeTableAdapter = new themeTableAdapter();
+            Mvvm_theme = new BindingSource();
             themeTableAdapter.Fill(ds.theme);
             Mvvm_theme.DataSource = ds.theme;
 

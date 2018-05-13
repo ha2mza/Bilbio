@@ -262,6 +262,7 @@
             this.Controls.Add(this.dateInscriptionDateTimePicker);
             this.Name = "FormAdherant";
             this.Text = "FormAdherant";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormAdherant_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

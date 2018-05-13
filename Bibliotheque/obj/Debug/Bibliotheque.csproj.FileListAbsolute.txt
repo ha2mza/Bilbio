@@ -30,3 +30,14 @@ C:\Users\Admin\source\repos\Bibliotheque\New folder\Bibliotheque\obj\Debug\Bibli
 C:\Users\Admin\source\repos\Bibliotheque\New folder\Bibliotheque\obj\Debug\Bibliotheque.csproj.CoreCompileInputs.cache
 C:\Users\Admin\source\repos\Bibliotheque\New folder\Bibliotheque\obj\Debug\Bibliotheque.exe
 C:\Users\Admin\source\repos\Bibliotheque\New folder\Bibliotheque\obj\Debug\Bibliotheque.pdb
+C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\bin\Debug\Bibliotheque.exe
+C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\bin\Debug\Bibliotheque.pdb
+C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\obj\Debug\Bibliotheque.csprojResolveAssemblyReference.cache
+C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\obj\Debug\Bibliotheque.FormEmprunt.resources
+C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\obj\Debug\Bibliotheque.FormAdherant.resources
+C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\obj\Debug\Bibliotheque.FormLivre.resources
+C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\obj\Debug\Bibliotheque.FormRetour.resources
+C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\obj\Debug\Bibliotheque.Menu.resources
+C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\obj\Debug\Bibliotheque.Properties.Resources.resources
+C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\obj\Debug\Bibliotheque.FormTheme.resources
+C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\obj\Debug\Bibliotheque.csproj.GenerateResource.Cache
