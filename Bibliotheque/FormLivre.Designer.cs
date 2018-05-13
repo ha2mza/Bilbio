@@ -285,6 +285,7 @@
             this.Controls.Add(this.btnajouter);
             this.Name = "FormLivre";
             this.Text = "Livre";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormLivre_FormClosing);
             this.Load += new System.EventHandler(this.FormLivre_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

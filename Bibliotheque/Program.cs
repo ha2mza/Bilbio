@@ -13,6 +13,8 @@ namespace Bibliotheque
         public static DsBiblio ds = null;
 
         public static AdherentTableAdapter AdherentTableAdapter = null;
+        public static livreTableAdapter livreTableAdapter = null;
+        public static themeTableAdapter themeTableAdapter = null;
 
         public static FormAdherant fa = null;
         public static FormLivre fl = null;
@@ -28,6 +30,10 @@ namespace Bibliotheque
             ds = new DsBiblio();
             AdherentTableAdapter = new AdherentTableAdapter();
             AdherentTableAdapter.Fill(ds.Adherent);
+            livreTableAdapter = new livreTableAdapter();
+            livreTableAdapter.Fill(ds.livre);
+            themeTableAdapter = new themeTableAdapter();
+            themeTableAdapter.Fill(ds.theme);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Menu());

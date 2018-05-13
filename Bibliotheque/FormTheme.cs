@@ -14,18 +14,14 @@ namespace Bibliotheque
     public partial class FormTheme : Form
     {
         DsBiblio ds = null;
-        themeTableAdapter themeTableAdapter = null;
         BindingSource Mvvm_theme = null;
 
         public FormTheme()
         {
             InitializeComponent();
-            ds = new DsBiblio();
-            themeTableAdapter = new themeTableAdapter();
+            ds = Program.ds;          
             Mvvm_theme = new BindingSource();
-            themeTableAdapter.Fill(ds.theme);
             Mvvm_theme.DataSource = ds.theme;
-
             codethTextBox.DataBindings.Add("Text", Mvvm_theme, "codeth", false, DataSourceUpdateMode.Never);
             intituleThTextBox.DataBindings.Add("Text", Mvvm_theme, "intituleTh", false, DataSourceUpdateMode.Never);
 
@@ -99,6 +95,11 @@ namespace Bibliotheque
         private void btnAnnuler_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void FormTheme_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Program.ft = null;
         }
     }
 }

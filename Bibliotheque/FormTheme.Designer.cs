@@ -221,6 +221,7 @@
             this.Controls.Add(this.intituleThTextBox);
             this.Name = "FormTheme";
             this.Text = "Theme";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormTheme_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

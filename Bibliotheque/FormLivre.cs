@@ -14,18 +14,14 @@ namespace Bibliotheque
     public partial class FormLivre : Form
     {
         DsBiblio ds = null;
-        livreTableAdapter livreTableAdapter = null;
         BindingSource Mvvm_livre = null;
         public FormLivre()
         {
             InitializeComponent();
-            ds = new DsBiblio();
-            livreTableAdapter = new livreTableAdapter();
-            livreTableAdapter.Fill(ds.livre);
+            ds = Program.ds;
             Mvvm_livre = new BindingSource();
             Mvvm_livre.DataSource = ds.livre;
-            themeTableAdapter themetableadpter = new themeTableAdapter();
-            themetableadpter.Fill(ds.theme);
+            Program.themeTableAdapter.Fill(ds.theme);
             codeLTextBox.DataBindings.Add("Text", Mvvm_livre, "codeL", true, DataSourceUpdateMode.Never);
             titreTextBox.DataBindings.Add("Text", Mvvm_livre, "titre", true, DataSourceUpdateMode.Never);
             auteurTextBox.DataBindings.Add("Text", Mvvm_livre, "auteur", true, DataSourceUpdateMode.Never);
@@ -102,7 +98,12 @@ namespace Bibliotheque
 
         private void FormLivre_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        private void FormLivre_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Program.fl = null;
         }
     }
 }

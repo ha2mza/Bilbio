@@ -64,6 +64,7 @@ namespace Bibliotheque
         {
             try {
                  Mvvm_adherant.RemoveAt(Mvvm_adherant.Find("codeA", txtRech.Text));
+                MessageBox.Show("Suppression avec succes");
             }
             catch(Exception ex) { MessageBox.Show(ex.Message); }
             }
