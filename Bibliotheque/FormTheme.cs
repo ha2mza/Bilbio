@@ -77,7 +77,6 @@ namespace Bibliotheque
         private void btnnext_Click(object sender, EventArgs e)
         {
             Mvvm_theme.MoveNext();
-            lahreech 9ra mzzzn 
         }
 
         private void btnprevious_Click(object sender, EventArgs e)
