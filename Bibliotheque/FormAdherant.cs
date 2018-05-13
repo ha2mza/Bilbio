@@ -17,6 +17,7 @@ namespace Bibliotheque
         AdherentTableAdapter AdherentTableAdapter = null;
         BindingSource Mvvm_adherant = null;
         bool vide = true;
+        // Test finaaal
         public FormAdherant()
         {
             InitializeComponent();
