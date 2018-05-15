@@ -14,22 +14,46 @@ namespace Bibliotheque
     public partial class FormEmprunt : Form
     {
         DsBiblio ds = null;
-        empruntTableAdapter empruntTableAdapter = null;
         public FormEmprunt()
         {
             InitializeComponent();
-            ds = new DsBiblio();
-            empruntTableAdapter = new empruntTableAdapter();
-            empruntTableAdapter.Fill(ds.emprunt);
+            ds = Program.ds;
+            //codeAComboBox.DisplayMember = "codeA";
+            codeAComboBox.ValueMember = "codeA";
+            codeAComboBox.DataSource = ds.Adherent;
+            codethComboBox.DisplayMember = "intituleTh";
+            codethComboBox.ValueMember = "codeth";
+            codethComboBox.DataSource = ds.theme;
+            empruntDataGridView.DataSource = ds.emprunt;
+
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            try
+            {
+                foreach (DsBiblio.livreRow livre in lstBoxLivres.SelectedItems)
+                {
+                    ds.emprunt.AddempruntRow(livre,
+                        ds.Adherent.FindBycodeA((int)codeAComboBox.SelectedValue),
+                        date_empruntDateTimePicker.Value,
+                        DateTime.Now);
+                    ds.emprunt.Last().Setdate_retourNull();
 
+                }
+
+                empruntDataGridView.DataSource = ds.emprunt;
+            }catch(Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         private void codethComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            lstBoxLivres.DataSource = (
+                from livre in ds.livre
+                where livre.CodeTh == (int)codethComboBox.SelectedValue
+                select livre).ToList();
+            lstBoxLivres.DisplayMember = "Titre";
+            lstBoxLivres.ValueMember = "codeL";
 
         }
 
@@ -40,7 +64,12 @@ namespace Bibliotheque
 
         private void codeAComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            txtnomAdr.Text = (
+                from adherant in ds.Adherent
+                where adherant.codeA == (int)codeAComboBox.SelectedValue
+                select adherant.nomA
 
+                ).First();
         }
     }
 }

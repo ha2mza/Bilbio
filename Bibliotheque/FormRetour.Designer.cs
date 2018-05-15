@@ -133,6 +133,7 @@
             this.Controls.Add(this.dateretourDateTimePicker);
             this.Name = "FormRetour";
             this.Text = "FormRetour";
+            this.Load += new System.EventHandler(this.FormRetour_Load);
             ((System.ComponentModel.ISupportInitialize)(this.retourDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

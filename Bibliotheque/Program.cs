@@ -15,6 +15,7 @@ namespace Bibliotheque
         public static AdherentTableAdapter AdherentTableAdapter = null;
         public static livreTableAdapter livreTableAdapter = null;
         public static themeTableAdapter themeTableAdapter = null;
+        public static empruntTableAdapter empruntTableAdapter = null;
 
         public static FormAdherant fa = null;
         public static FormLivre fl = null;
@@ -34,9 +35,11 @@ namespace Bibliotheque
             livreTableAdapter.Fill(ds.livre);
             themeTableAdapter = new themeTableAdapter();
             themeTableAdapter.Fill(ds.theme);
+            empruntTableAdapter = new empruntTableAdapter();
+            empruntTableAdapter.Fill(ds.emprunt);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Menu());
+            Application.Run(new FormEmprunt());
 
 
         }
