@@ -29,9 +29,13 @@ namespace Bibliotheque
                 dateInscriptionDateTimePicker.DataBindings.Add("Value", Mvvm_adherant, "DateInscription", true, DataSourceUpdateMode.Never);
             ds.Adherent.codeAColumn.AutoIncrementSeed = ds.Adherent.Count != 0 ? ds.Adherent.AsEnumerable().Max(x => x.codeA) + 1 : 1;
             ds.Adherent.codeAColumn.AutoIncrementStep = 1;
-            
+            codeATextBox.Enabled = false;
+            nomATextBox.Enabled = false;
+            adresseTextBox.Enabled = false;
+            dateInscriptionDateTimePicker.Enabled = false;
 
-            
+
+
         }
 
         private void btnAnnuler_Click(object sender, EventArgs e)
@@ -41,9 +45,14 @@ namespace Bibliotheque
 
         private void btnajouter_Click(object sender, EventArgs e)
         {
+            
             if (btnajouter.Text == "Ajouter")
             {
-                btnajouter.Text = "Nouveau?????";
+                btnajouter.Text = "Nouveau";
+                codeATextBox.Enabled = false;
+                nomATextBox.Enabled = false;
+                adresseTextBox.Enabled = false;
+                dateInscriptionDateTimePicker.Enabled = false;
 
                 try
                 {
@@ -56,11 +65,16 @@ namespace Bibliotheque
             }
             else
             {
+               
                 codeATextBox.Clear();
                 nomATextBox.Clear();
                 adresseTextBox.Clear();
                 dateInscriptionDateTimePicker.Value = DateTime.Now;
                 btnajouter.Text = "Ajouter";
+                codeATextBox.Enabled = true;
+                nomATextBox.Enabled = true;
+                adresseTextBox.Enabled = true;
+                dateInscriptionDateTimePicker.Enabled = true;
             }
 
         }
