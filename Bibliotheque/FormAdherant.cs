@@ -41,6 +41,11 @@ namespace Bibliotheque
 
         private void btnajouter_Click(object sender, EventArgs e)
         {
+            codeATextBox.Clear();
+            nomATextBox.Clear();
+            adresseTextBox.Clear();
+            dateInscriptionDateTimePicker.Value = DateTime.Now;
+            btnajouter.Text = "Ajouter";
             try
             {
                 ds.Adherent.AddAdherentRow(nomATextBox.Text, adresseTextBox.Text, dateInscriptionDateTimePicker.Value);
