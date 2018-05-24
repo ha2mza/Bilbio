@@ -38,21 +38,49 @@ namespace Bibliotheque
                 Program.ft.Close();
                 Program.ft = null;
             }
+
+            if (Program.fe != null)
+            {
+                Program.fe.Close();
+                Program.fe = null;
+            }
+
+            if (Program.fr != null)
+            {
+                Program.fr.Close();
+                Program.fr = null;
+            }
         }
 
         private void enregisterToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Program.AdherentTableAdapter.Update(Program.ds.Adherent);
+            Program.livreTableAdapter.Update(Program.ds.livre);
+            Program.themeTableAdapter.Update(Program.ds.theme);
+            Program.empruntTableAdapter.Update(Program.ds.emprunt);
         }
 
         private void saisieRetourToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (Program.fr == null)
+            {
+                closesForm();
+                Program.fr = new FormRetour();
+                Program.fr.MdiParent = this;
+                Program.fr.Show();
+            }
 
         }
 
         private void empruntToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if(Program.fe == null)
+            {
+                closesForm();
+                Program.fe = new FormEmprunt();
+                Program.fe.MdiParent = this;
+                Program.fe.Show();
+            }
         }
 
         private void thèmeToolStripMenuItem_Click(object sender, EventArgs e)

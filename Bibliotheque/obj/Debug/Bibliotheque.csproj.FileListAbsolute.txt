@@ -56,3 +56,4 @@ C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\bin\Debug\zh-Hant\
 C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\obj\Debug\Bibliotheque.FormEtat.resources
 C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\obj\Debug\RdlCompile.cache
 C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\obj\Debug\RdlCompile.compiled
+C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\obj\Debug\Bibliotheque.csprojResolveAssemblyReference.cache

@@ -20,6 +20,8 @@ namespace Bibliotheque
         public static FormAdherant fa = null;
         public static FormLivre fl = null;
         public static FormTheme ft = null;
+        public static FormEmprunt fe = null;
+        public static FormRetour fr = null;
 
         /// <summary>
         /// Point d'entrée principal de l'application.
@@ -39,7 +41,7 @@ namespace Bibliotheque
             empruntTableAdapter.Fill(ds.emprunt);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormEtat());
+            Application.Run(new Menu());
 
 
         }
