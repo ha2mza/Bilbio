@@ -19,7 +19,7 @@ namespace Bibliotheque
         public FormTheme()
         {
             InitializeComponent();
-            ds = Program.ds;          
+            ds = Program.ds;
             Mvvm_theme = new BindingSource();
             Mvvm_theme.DataSource = ds.theme;
             codethTextBox.DataBindings.Add("Text", Mvvm_theme, "codeth", false, DataSourceUpdateMode.Never);
@@ -44,8 +44,10 @@ namespace Bibliotheque
             try
             {
                 DsBiblio.themeRow themerow = ds.theme.FindBycodeth(int.Parse(codethTextBox.Text));
+                themerow.BeginEdit();
                 themerow.codeth = int.Parse(codethTextBox.Text);
                 themerow.intituleTh = intituleThTextBox.Text;
+                themerow.EndEdit();
                 Mvvm_theme.ResetBindings(true);
             }
             catch (Exception ex)
@@ -58,7 +60,40 @@ namespace Bibliotheque
         {
             try
             {
-                ds.theme.RemovethemeRow(ds.theme.FindBycodeth(int.Parse(codethTextBox.Text)));
+                if (ds.theme.FindBycodeth(int.Parse(codethTextBox.Text)).GetlivreRows().Count() > 0)
+                {
+                    DialogResult res = MessageBox.Show("ce theme a des livres voulez vous vraiment le supprimer", "Suppession", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (res == DialogResult.OK)
+                    {
+                        var livres = ds.theme.FindBycodeth(int.Parse(codethTextBox.Text)).GetlivreRows().ToList();
+                        if (livres.Where(livre => livre.GetempruntRows().Count() > 0).Count() > 0)
+                        {
+                            DialogResult resu = MessageBox.Show("Certain livres ont des emprunts voulez vous vraiment les supprimer", "Suppession", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                            if (res == DialogResult.OK)
+                            {
+                                var livresExcepetion = livres.Where(livre => livre.GetempruntRows().Count() > 0).ToList();
+                                livresExcepetion.ForEach(livre => 
+                                livre.GetempruntRows().ToList().ForEach(emprunt=>
+                                emprunt.Delete()));
+                            }
+                            livres.ForEach(x => x.Delete());
+                            Mvvm_theme.RemoveCurrent();
+                            MessageBox.Show("Suppression avec succes");
+
+                        }
+                        else
+                        {
+                            livres.ForEach(x => x.Delete());
+                            Mvvm_theme.RemoveCurrent();
+                            MessageBox.Show("Suppression avec succes");
+                        }
+                    }
+
+                }
+                else
+                    Mvvm_theme.RemoveCurrent();
+
+                MessageBox.Show("Suppression avec succes");
             }
             catch (Exception ex)
             {

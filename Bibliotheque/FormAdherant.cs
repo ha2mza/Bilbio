@@ -82,16 +82,33 @@ namespace Bibliotheque
         private void btnModifier_Click(object sender, EventArgs e)
         {
            DsBiblio.AdherentRow adherentrow= ds.Adherent.FindBycodeA(int.Parse(codeATextBox.Text));
+            adherentrow.BeginEdit();
             adherentrow.nomA = nomATextBox.Text;
             adherentrow.adresse = adresseTextBox.Text;
             adherentrow.DateInscription = dateInscriptionDateTimePicker.Value;
+            adherentrow.EndEdit();
             Mvvm_adherant.ResetBindings(true);
+            
         }
 
         private void btnSupprimer_Click(object sender, EventArgs e)
         {
             try {
-                 Mvvm_adherant.RemoveAt(Mvvm_adherant.Find("codeA", txtRech.Text));
+
+                if (ds.Adherent.FindBycodeA(int.Parse(codeATextBox.Text)).GetempruntRows().Count() > 0)
+                {
+                    DialogResult res = MessageBox.Show("cet adherant a des livres voulez vous vraiment le supprimer", "Suppession", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (res == DialogResult.OK)
+                    {
+                        ds.Adherent.FindBycodeA(int.Parse(codeATextBox.Text)).GetempruntRows().ToList().ForEach(emprunt => emprunt.Delete());
+
+                        Mvvm_adherant.RemoveCurrent();
+                    }
+
+                }
+                else
+                    Mvvm_adherant.RemoveCurrent();
+
                 MessageBox.Show("Suppression avec succes");
             }
             catch(Exception ex) { MessageBox.Show(ex.Message); }

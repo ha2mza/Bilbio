@@ -32,7 +32,6 @@ C:\Users\Admin\source\repos\Bibliotheque\New folder\Bibliotheque\obj\Debug\Bibli
 C:\Users\Admin\source\repos\Bibliotheque\New folder\Bibliotheque\obj\Debug\Bibliotheque.pdb
 C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\bin\Debug\Bibliotheque.exe
 C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\bin\Debug\Bibliotheque.pdb
-C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\obj\Debug\Bibliotheque.csprojResolveAssemblyReference.cache
 C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\obj\Debug\Bibliotheque.FormEmprunt.resources
 C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\obj\Debug\Bibliotheque.FormAdherant.resources
 C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\obj\Debug\Bibliotheque.FormLivre.resources
@@ -41,3 +40,19 @@ C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\obj\Debug\Biblioth
 C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\obj\Debug\Bibliotheque.Properties.Resources.resources
 C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\obj\Debug\Bibliotheque.FormTheme.resources
 C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\obj\Debug\Bibliotheque.csproj.GenerateResource.Cache
+C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\obj\Debug\Bibliotheque.FormEtat.resources
+C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\obj\Debug\RdlCompile.cache
+C:\Users\younes\source\repos\Bibliotheque_younes\Bibliotheque\obj\Debug\RdlCompile.compiled

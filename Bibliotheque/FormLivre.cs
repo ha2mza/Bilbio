@@ -55,10 +55,12 @@ namespace Bibliotheque
         private void btnModifier_Click(object sender, EventArgs e)
         {
             DsBiblio.livreRow livrerow = ds.livre.FindByCodeL(int.Parse(codeLTextBox.Text));
+            livrerow.BeginEdit();
             livrerow.Titre = titreTextBox.Text;
             livrerow.Auteur = auteurTextBox.Text;
             livrerow.NbExemplaire = int.Parse(nbExemplaireTextBox.Text);
             livrerow.CodeTh = int.Parse(codeThComboBox.Text);
+            livrerow.EndEdit();
             Mvvm_livre.ResetBindings(true);
         }
 
@@ -66,7 +68,21 @@ namespace Bibliotheque
         {
             try
             {
-                Mvvm_livre.RemoveAt(Mvvm_livre.Find("codeL", codeLTextBox.Text));
+                if (ds.livre.FindByCodeL(int.Parse(codeLTextBox.Text)).GetempruntRows().Count() > 0)
+                {
+                    DialogResult res = MessageBox.Show("Certain livres ont des emprunts voulez vous vraiment les supprimer", "Suppession", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (res == DialogResult.OK)
+                    {
+                        ds.livre.FindByCodeL(int.Parse(codeLTextBox.Text)).GetempruntRows().ToList().ForEach(emprunt => emprunt.Delete());
+
+                        Mvvm_livre.RemoveCurrent();
+                    }
+
+                }
+                else
+                    Mvvm_livre.RemoveCurrent();
+
+                MessageBox.Show("Suppression avec succes");
             }
             catch(Exception ex) { MessageBox.Show(ex.Message); }
         }

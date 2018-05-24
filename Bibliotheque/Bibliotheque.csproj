@@ -33,8 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,6 +65,12 @@
     </Compile>
     <Compile Include="FormAdherant.Designer.cs">
       <DependentUpon>FormAdherant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEtat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEtat.Designer.cs">
+      <DependentUpon>FormEtat.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLivre.cs">
       <SubType>Form</SubType>
@@ -95,6 +104,9 @@
     <EmbeddedResource Include="FormAdherant.resx">
       <DependentUpon>FormAdherant.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormEtat.resx">
+      <DependentUpon>FormEtat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLivre.resx">
       <DependentUpon>FormLivre.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,6 +128,7 @@
     <EmbeddedResource Include="FormTheme.resx">
       <DependentUpon>FormTheme.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
     <None Include="DsBiblio.xsc">
       <DependentUpon>DsBiblio.xsd</DependentUpon>
     </None>
